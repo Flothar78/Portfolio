@@ -1,24 +1,35 @@
 const images = document.getElementsByClassName("images");
-const button = document.getElementById("next");
+const previousButton = document.getElementById("previous");
+const nextButton = document.getElementById("next");
 const imagesContainer = document.getElementsByClassName("images-container")[0];
 const width = 640;
-let slideIndex = 1;
 
-const next = button.addEventListener("click", () => {
-  nextPhoto();
-  console.log(imagesContainer.style.left);
+nextButton.addEventListener("click", () => {
+  nextProject();
+});
+let nextSlideIndex = 1;
+function nextProject() {
+  if (nextSlideIndex < images.length) {
+    imagesContainer.style.left = -width * nextSlideIndex + "px";
+    nextSlideIndex++;
+  } else {
+    nextSlideIndex = 0;
+    imagesContainer.style.left = -width * nextSlideIndex + "px";
+    nextSlideIndex++;
+  }
+}
+
+previousButton.addEventListener("click", () => {
+  previousProject();
 });
 
-function nextPhoto() {
-  console.log(slideIndex);
-  if (slideIndex < images.length) {
-    imagesContainer.style.left = -width * slideIndex + "px";
-    slideIndex++;
-    console.log(slideIndex);
-  } else {
-    slideIndex = 0;
-    imagesContainer.style.left = -width * slideIndex + "px";
-    slideIndex++;
-    console.log(slideIndex);
-  }
+function previousProject() {
+  const array = Object.keys(images);
+  let prevSlideIndex = array.forEach((element) => {
+    element = element - 1;
+    console.log(element);
+  });
+  //console.log(prevSlideIndex);
+  imagesContainer.style.left = -width * prevSlideIndex + "px";
+  console.log(imagesContainer.style.left);
 }
