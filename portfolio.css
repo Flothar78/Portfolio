@@ -1,0 +1,13 @@
+.carousel {
+  width: 640px;
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+}
+.carousel .images-container {
+  position: absolute;
+  display: flex;
+  left: 0px;
+}
+
+/*# sourceMappingURL=portfolio.css.map */

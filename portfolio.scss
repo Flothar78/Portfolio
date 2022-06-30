@@ -1,0 +1,11 @@
+.carousel {
+  width: 640px;
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+  .images-container {
+    position: absolute;
+    display: flex;
+    left: 0px;
+  }
+}
