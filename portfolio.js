@@ -14,22 +14,28 @@ previousButton.addEventListener("click", () => {
 });
 
 function nextProject() {
-  if (slideIndex < images.length) {
-    imagesContainer.style.left = -width * slideIndex + "px";
+  if (slideIndex < images.length - 1) {
+    console.log(slideIndex);
     slideIndex++;
+    imagesContainer.style.left = -width * slideIndex + "px";
+    console.log(slideIndex);
   } else {
     slideIndex = 0;
     imagesContainer.style.left = -width * slideIndex + "px";
-    slideIndex++;
+
+    console.log(slideIndex);
   }
 }
 
 function previousProject() {
   console.log(slideIndex);
-  imagesContainer.style.left = -width * slideIndex + "px";
-  if (slideIndex > 0 && slideIndex < 5) {
-    slideIndex--;
+  slideIndex--;
+  console.log(slideIndex);
+  if (slideIndex < 0) {
+    slideIndex = images.length - 1;
+    console.log(slideIndex);
+    imagesContainer.style.left = -width * slideIndex + "px";
   } else {
-    slideIndex = 3;
+    imagesContainer.style.left = -width * slideIndex + "px";
   }
 }
