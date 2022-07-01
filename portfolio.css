@@ -1,8 +1,13 @@
 .carousel {
+  border: solid blue 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 640px;
   height: 600px;
   position: relative;
   overflow: hidden;
+  margin: auto;
 }
 .carousel .images-container {
   position: absolute;
@@ -11,8 +16,12 @@
 }
 
 .button-container {
+  border: solid red 2px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+.button-container button {
+  font-size: 3rem;
 }
 
 /*# sourceMappingURL=portfolio.css.map */
