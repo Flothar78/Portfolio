@@ -24,6 +24,16 @@ previousButton.addEventListener("click", () => {
 });
 
 function previousProject() {
+  let prevSlideIndex = nextSlideIndex - 2;
+  console.log(nextSlideIndex);
+  console.log(prevSlideIndex);
+
+  imagesContainer.style.left = -width * prevSlideIndex + "px";
+  prevSlideIndex--;
+  console.log(prevSlideIndex);
+}
+
+/*function previousProject() {
   const array = Object.keys(images);
   let prevSlideIndex = array.forEach((element) => {
     element = element - 1;
@@ -32,4 +42,4 @@ function previousProject() {
   //console.log(prevSlideIndex);
   imagesContainer.style.left = -width * prevSlideIndex + "px";
   console.log(imagesContainer.style.left);
-}
+}*/
