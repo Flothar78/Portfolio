@@ -33,17 +33,3 @@ function previousProject() {
   console.log(prevSlideIndex);
 }
 
-/*function previousProject() {
-  const array = Object.keys(images);
-  let prevSlideIndex = array.forEach((element) => {
-    element = element - 1;
-    console.log(element);
-  });
-  //console.log(prevSlideIndex);
-  imagesContainer.style.left = -width * prevSlideIndex + "px";
-  console.log(imagesContainer.style.left);
-<<<<<<< HEAD
-}*/
-=======
-}
->>>>>>> 72e1487fb807acf8ef6906ca549547b5da82d878
