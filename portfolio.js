@@ -3,33 +3,33 @@ const previousButton = document.getElementById("previous");
 const nextButton = document.getElementById("next");
 const imagesContainer = document.getElementsByClassName("images-container")[0];
 const width = 640;
+let slideIndex = 0;
 
 nextButton.addEventListener("click", () => {
   nextProject();
 });
-let nextSlideIndex = 1;
-function nextProject() {
-  if (nextSlideIndex < images.length) {
-    imagesContainer.style.left = -width * nextSlideIndex + "px";
-    nextSlideIndex++;
-  } else {
-    nextSlideIndex = 0;
-    imagesContainer.style.left = -width * nextSlideIndex + "px";
-    nextSlideIndex++;
-  }
-}
 
 previousButton.addEventListener("click", () => {
   previousProject();
 });
 
-function previousProject() {
-  let prevSlideIndex = nextSlideIndex - 2;
-  console.log(nextSlideIndex);
-  console.log(prevSlideIndex);
-
-  imagesContainer.style.left = -width * prevSlideIndex + "px";
-  prevSlideIndex--;
-  console.log(prevSlideIndex);
+function nextProject() {
+  if (slideIndex < images.length) {
+    imagesContainer.style.left = -width * slideIndex + "px";
+    slideIndex++;
+  } else {
+    slideIndex = 0;
+    imagesContainer.style.left = -width * slideIndex + "px";
+    slideIndex++;
+  }
 }
 
+function previousProject() {
+  console.log(slideIndex);
+  imagesContainer.style.left = -width * slideIndex + "px";
+  if (slideIndex > 0 && slideIndex < 5) {
+    slideIndex--;
+  } else {
+    slideIndex = 3;
+  }
+}
