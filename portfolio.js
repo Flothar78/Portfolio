@@ -1,25 +1,21 @@
 const images = document.getElementsByClassName("images");
-const button = document.getElementById("next");
+const previousButton = document.getElementById("previous");
+const nextButton = document.getElementById("next");
 const imagesContainer = document.getElementsByClassName("images-container")[0];
 const width = 640;
-let slideIndex = 1;
 
-const next = button.addEventListener("click", () => {
-  nextPhoto();
-  console.log(imagesContainer.style.left);
+nextButton.addEventListener("click", () => {
+  nextProject();
 });
-
-function nextPhoto() {
-  console.log(slideIndex);
-  if (slideIndex < images.length) {
-    imagesContainer.style.left = -width * slideIndex + "px";
-    slideIndex++;
-    console.log(slideIndex);
+let nextSlideIndex = 1;
+function nextProject() {
+  if (nextSlideIndex < images.length) {
+    imagesContainer.style.left = -width * nextSlideIndex + "px";
+    nextSlideIndex++;
   } else {
-    slideIndex = 0;
-    imagesContainer.style.left = -width * slideIndex + "px";
-    slideIndex++;
-    console.log(slideIndex);
+    nextSlideIndex = 0;
+    imagesContainer.style.left = -width * nextSlideIndex + "px";
+    nextSlideIndex++;
   }
 }
 
@@ -46,4 +42,8 @@ function previousProject() {
   //console.log(prevSlideIndex);
   imagesContainer.style.left = -width * prevSlideIndex + "px";
   console.log(imagesContainer.style.left);
+<<<<<<< HEAD
 }*/
+=======
+}
+>>>>>>> 72e1487fb807acf8ef6906ca549547b5da82d878
