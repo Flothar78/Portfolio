@@ -13,15 +13,19 @@ previousButton.addEventListener("click", () => {
   previousProject();
 });
 
+function idProjectDisplay() {
+  document.getElementById("id-project-display").innerHTML = slideIndex + 1;
+}
+
 function nextProject() {
   if (slideIndex < images.length - 1) {
     slideIndex++;
     imagesContainer.style.left = -width * slideIndex + "px";
-    document.getElementById("name-project-display").innerHTML = slideIndex + 1;
+    idProjectDisplay();
   } else {
     slideIndex = 0;
     imagesContainer.style.left = -width * slideIndex + "px";
-    document.getElementById("name-project-display").innerHTML = slideIndex + 1;
+    idProjectDisplay();
   }
 }
 
@@ -30,9 +34,9 @@ function previousProject() {
   if (slideIndex < 0) {
     slideIndex = images.length - 1;
     imagesContainer.style.left = -width * slideIndex + "px";
-    document.getElementById("name-project-display").innerHTML = slideIndex + 1;
+    idProjectDisplay();
   } else {
     imagesContainer.style.left = -width * slideIndex + "px";
-    document.getElementById("name-project-display").innerHTML = slideIndex + 1;
+    idProjectDisplay();
   }
 }
