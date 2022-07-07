@@ -1,0 +1,33 @@
+#id-project-display {
+  border: solid green 2px;
+  padding: auto;
+  font-size: 3rem;
+}
+
+.carousel {
+  border: solid blue 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 640px;
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+}
+.carousel .images-container {
+  position: absolute;
+  display: flex;
+  left: 0px;
+}
+
+.button-container {
+  border: solid red 2px;
+  display: flex;
+  justify-content: space-between;
+}
+.button-container button {
+  font-size: 3rem;
+}
+
+/*# sourceMappingURL=portfolio.css.map */
